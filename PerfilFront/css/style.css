@@ -1,0 +1,392 @@
+:root {
+  --color-white: WHITE;
+  --color-light: #f4f4f4;
+  --color-dark: #0f629b;
+  --color-black: #2b2e30;
+  --color-primary: #fe8f7b;
+  --color-primary-light: hsl(14, 89%, 53%, 12%);
+  --transition: all 300ms ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 15px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: "Tajawal", sans-serif;
+  color: var(--color-dark);
+  max-width: 100vw;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--color-black);
+  line-height: 1.2;
+}
+h1 {
+  font-size: 3.8rem;
+  font-family: "Lato", sans-serif;
+}
+
+h2 {
+  font-size: 2.6rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+h5 {
+  font-size: 0.8rem;
+}
+
+p {
+  line-height: 1.8;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+section {
+  padding: 10rem 0 7rem;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+section h1 {
+  text-align: center;
+  display: block;
+  margin-bottom: 5rem;
+}
+
+img {
+  width: 100%;
+}
+
+.btn {
+  padding: 1.4rem 3.4rem;
+  font-size: 1.1rem;
+  color: var(--color-black);
+  background: var(--color-white);
+  display: inline-block;
+  margin: 2rem 0;
+  transition: var(--transition);
+}
+
+.btn-primario {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn:hover {
+  box-shadow: 0 2rem 2rem var(--color-primary-light);
+}
+
+nav {
+  width: 100%;
+  height: 5rem;
+  background: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  border-bottom: 1px solid var(--color-light);
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+nav h3 {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+}
+
+nav .container ul {
+  display: flex;
+  height: 100%;
+}
+
+nav .container ul li a {
+  height: 100%;
+  width: 9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-dark);
+  position: relative;
+  transition: var(--transition);
+  font-size: 1.1rem;
+  font-family: "Tajawal", sans-serif;
+}
+
+nav .container ul li a:hover {
+  color: var(--color-primary);
+}
+
+section .principal {
+  display: grid;
+  place-items: center;
+  position: relative;
+  top: 5rem;
+  padding-bottom: 14rem;
+}
+
+section.principal .container {
+  display: grid;
+  grid-template-columns: 5rem auto 26rem;
+  gap: 2rem;
+}
+
+section.principal .social {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 5rem;
+}
+
+section.principal .social a {
+  font-size: 2rem;
+  background: var(--color-light);
+  color: var(--color-dark);
+  padding: 0.3rem;
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--transition);
+}
+
+section.principal .social a:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+section.principal .info h1 {
+  text-align: left;
+  margin: 0;
+}
+
+section.principal .info h1 {
+  margin: 2.4rem 0 1rem;
+}
+
+section.principal .info p {
+  width: 35rem;
+  font-size: 1.2rem;
+  color: #034085;
+}
+
+section.principal .profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.principal .profile .circulo-afuera {
+  width: 26rem;
+  height: 26rem;
+  border: 1px solid var(--color-primary-light);
+  border-radius: 50%;
+  position: relative;
+  background: var(--color-white);
+}
+
+section.principal .profile .circulo-adentro {
+  position: absolute;
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+section.acerca {
+  background: var(--color-light);
+}
+
+section.acerca .container {
+  display: center;
+  grid-template-columns: 26rem auto;
+}
+
+section.acerca p {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-family: "Tajawal", sans-serif;
+  color: #034085;
+}
+
+section.habilidades .container {
+  width: 60%;
+}
+
+section.habilidades .habilidad {
+  margin-bottom: 1rem;
+}
+
+section.habilidades .habilidad .item {
+  display: flex;
+  flex-direction: column;
+  align-items: star;
+  gap: 1rem;
+  padding: 1.6rem;
+  background: var(--color-light);
+  margin-bottom: 0.3rem;
+  transition: var(--transition);
+}
+
+section.habilidades .habilidad .item h5 {
+  font-size: 1.1rem;
+}
+
+section.habilidades .habilidad .item:hover {
+  background: var(--color-white);
+}
+
+section.habilidades .habilidad .area-progreso {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+section.habilidades .item .barra-progreso {
+  width: 100%;
+  height: 1rem;
+  background: var(--color-primary-light);
+}
+
+section.habilidades .item .barra-progreso .progreso {
+  height: 100%;
+  width: 92%;
+  background: var(--color-primary);
+}
+
+section.habilidades .item:nth-child(1) .barra-progreso .progreso {
+  width: 40%;
+}
+
+section.habilidades .item:nth-child(2) .barra-progreso .progreso {
+  width: 30%;
+}
+
+section.habilidades .item:nth-child(3) .barra-progreso .progreso {
+  width: 30%;
+}
+
+section.habilidades .item:nth-child(4) .barra-progreso .progreso {
+  width: 30%;
+}
+
+section.habilidades .item:nth-child(5) .barra-progreso .progreso {
+  width: 80%;
+}
+
+section.contact {
+  background: var(--color-light);
+}
+
+section.contact .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 50%;
+  gap: 15rem;
+}
+
+section.contact .container .contacto {
+  background: var(--color-white);
+  padding: 3rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  cursor: default;
+  transition: var(--transition);
+}
+
+section.contact .container .contacto:hover {
+  box-shadow: 0 3rem 3rem var(--color-primary-light);
+}
+
+section.contact .container .contacto i {
+  background: var(--color-primary);
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--color-white);
+  padding: 0.3rem;
+  font-size: 2rem;
+}
+
+section.contact .container .contacto p {
+  font-size: 1.2rem;
+  font-family: "Tajawal", sans-serif;
+}
+footer {
+  padding-top: 5rem;
+  background: #0f599b;
+}
+
+footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer .container h3 {
+  color: var(--color-white);
+}
+footer .container ul {
+  display: flex;
+  gap: 3rem;
+}
+
+footer .container ul a {
+  color: var(--color-white);
+  transition: var(--transition);
+  font-size: 1.1rem;
+}
+
+footer .container ul a:hover {
+  color: var(--color-primary);
+}
+
+footer .pie {
+  background: #0f599b;
+  text-align: center;
+  margin-top: 5rem;
+  padding: 1px 0;
+  font-size: 0.8rem;
+}
